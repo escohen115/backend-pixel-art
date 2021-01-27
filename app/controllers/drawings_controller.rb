@@ -9,6 +9,18 @@ class DrawingsController < ApplicationController
         render json: drawing
     end
 
+    def destroy
+        drawing = Drawing.find(params[:id])
+        drawing.destroy
+        render json: drawing
+
+    end
+
+    def show
+        drawing = Drawing.find(params[:id])
+        render json: drawing
+    end
+
     private
 
     def drawing_params
