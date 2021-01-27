@@ -11,6 +11,6 @@ class CommentsController < ApplicationController
     private
 
     def comment_params
-        params.permit(:user_id, :drawing_id, :description)
+        params.permit(:user_id, :drawing_id, :description, :commenter)
     end
 end

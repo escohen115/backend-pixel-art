@@ -12,26 +12,26 @@ User.destroy_all
 Comment.destroy_all
 
 
-color_palette = ['blue', 'grey', 'red', 'orange', 'purple', 'yellow']
-color_array = []
-color_array_parent = []
-20.times do 
-    600.times do
-        color_array.push(color_palette.sample)
-    end
-    color_array_parent.push(color_array)
-    color_array = []
-end
+# color_palette = ['blue', 'grey', 'red', 'orange', 'purple', 'yellow']
+# color_array = []
+# color_array_parent = []
+# 20.times do 
+#     600.times do
+#         color_array.push(color_palette.sample)
+#     end
+#     color_array_parent.push(color_array)
+#     color_array = []
+# end
 
 
-20.times do 
-    User.create(name: Faker::Name.first_name, username: Faker::Superhero.name)
-end
+# 20.times do 
+#     User.create(name: Faker::Name.first_name, username: Faker::Superhero.name)
+# end
 
-20.times do
-    Drawing.create(user_id: User.all.sample.id, color_array: color_array_parent.sample)
-end
+# 20.times do
+#     Drawing.create(user_id: User.all.sample.id, color_array: color_array_parent.sample)
+# end
 
-20.times do
-    Comment.create(description: "sample comment", user_id: User.all.sample.id, drawing_id: Drawing.all.sample.id)
-end
+# 20.times do
+#     Comment.create(description: "sample comment", user_id: User.all.sample.id, drawing_id: Drawing.all.sample.id)
+# end
